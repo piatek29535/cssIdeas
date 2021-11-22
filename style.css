@@ -1,0 +1,82 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: purple;
+    background: linear-gradient(to bottom left, orange, purple) no-repeat center fixed;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header{
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 3rem;
+}
+
+.list{
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card{
+    width: 100%;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    height: 400px;
+}
+
+.card iframe{
+    flex:9;
+    position: relative;
+} 
+
+.card iframe:hover ~ .description{
+    opacity:1;
+}
+
+.card .description{
+    opacity:0;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background: rgba(0,0,0,.3);
+}
+
+.card a{
+    flex:1;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: background .3s, color .3s, border-color .3s; 
+}
+
+.card a:hover{
+    background: white;
+    color: purple;
+    border-color: white;
+}
+
+@media(max-width:800px){
+    .list{
+        grid-template-columns: 1fr;
+    }
+}
