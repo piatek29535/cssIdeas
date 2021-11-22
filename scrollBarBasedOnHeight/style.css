@@ -1,0 +1,61 @@
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 2000px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: bold;
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    
+}
+
+nav ul{
+    display:flex;
+    background: slateblue;
+    height: clamp(3rem, 5vh, 5rem);
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.scrollBar{
+    height: 1vh;
+    background: white;
+    width: 50%;
+    position: absolute;
+}
+
+.box{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 5vw, 5rem);
+}
+
+.main1{
+    background: coral;
+}
+
+.main2{
+    background: purple;
+}
+
+.main3{
+    background: royalblue;
+}
