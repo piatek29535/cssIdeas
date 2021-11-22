@@ -43,7 +43,7 @@ header{
     position: relative;
 } 
 
-.card iframe:hover ~ .description{
+.card .description:hover{
     opacity:1;
 }
 
@@ -53,6 +53,12 @@ header{
     width: 100%;
     height: 90%;
     background: rgba(0,0,0,.3);
+    transition: opacity .4s;
+    overflow:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1em, 2.5vw, 2em);
 }
 
 .card a{
